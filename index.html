@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoMF — Minimalist Streetwear</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">CoMF</div>
+        <nav class="nav-links">
+            <a href="#hero">Início</a>
+            <a href="#catalog">Coleção</a>
+            <a href="#about">A Marca</a>
+        </nav>
+        <div class="nav-actions">
+            <!-- Botão de Favoritos -->
+            <button id="fav-btn" class="icon-btn" title="Favoritos">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span id="fav-count">0</span>
+            </button>
+
+            <!-- Botão do Carrinho -->
+            <button id="cart-btn" class="icon-btn" title="Carrinho">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section com Marquee de Fundo e Vitrine de Modelos -->
+    <section id="hero" class="hero">
+        <!-- Fundo Animado COMF -->
+        <div class="hero-bg-animated">
+            <div class="marquee-row row-1"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+            <div class="marquee-row row-2"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+            <div class="marquee-row row-3"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+            <div class="marquee-row row-4"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+            <div class="marquee-row row-5"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+            <div class="marquee-row row-6"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+            <div class="marquee-row row-7"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+            <div class="marquee-row row-8"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+            <div class="marquee-row row-9"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+            <div class="marquee-row row-10"><div class="marquee-content"><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span><span>COMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMFCOMF</span></div></div>
+        </div>
+
+        <!-- Vitrine de Modelos (Carrossel Dinâmico) -->
+        <div class="hero-slider-container">
+            <div class="slider-track" id="slider-track">
+                <!-- Os slides são renderizados automaticamente pelo script.js -->
+            </div>
+
+            <!-- Botões de Controle -->
+            <button class="slider-btn prev-btn" id="prev-btn">&#10094;</button>
+            <button class="slider-btn next-btn" id="next-btn">&#10095;</button>
+
+            <!-- Indicadores (Pontos) -->
+            <div class="slider-dots" id="slider-dots"></div>
+        </div>
+    </section>
+
+    <!-- Filtros e Catálogo -->
+    <section id="catalog" class="catalog-section">
+        <div class="section-header">
+            <h2>Coleção Atual</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="tshirt">Camisetas</button>
+                <button class="filter-btn" data-category="pants">Calças</button>
+                <button class="filter-btn" data-category="hoodie">Moletons</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+            <!-- Produtos inseridos via JS -->
+        </div>
+    </section>
+
+    <!-- Sobre a Marca -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>SOBRE A CoMF</h2>
+            <p>Nascida do desejo de simplificar o guarda-roupa urbano. A CoMF unifica a estética bruta do streetwear com o conforto absoluto da alfaiataria esportiva. Sem estampas exageradas, sem slogans efêmeros. Apenas corte, caimento e matéria-prima de verdade.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>CoMF</h3>
+                <p>Minimal Streetwear © 2026</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Instagram</a>
+                <a href="#">Termos & Trocas</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay Global para Modais/Sidebars -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Sidebar do Carrinho -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Itens do carrinho inseridos via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">R$ 0,00</span>
+            </div>
+            <button class="btn-primary btn-block" onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </aside>
+
+    <!-- Sidebar de Favoritos -->
+    <aside class="cart-sidebar" id="fav-sidebar">
+        <div class="cart-header">
+            <h3>Seus Favoritos</h3>
+            <button id="close-fav" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="fav-items">
+            <!-- Itens favoritados inseridos via JS -->
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
